@@ -7,6 +7,11 @@ public class ListProcessorImpl implements ListProcessor {
     @Override
     public boolean containsNegative(List<Integer> list) {
         Predicate<Integer> isNegative = num -> num < 0;
-        return list.stream().anyMatch(isNegative);
+        for (Integer num : list) {
+            if (isNegative.test(num)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
