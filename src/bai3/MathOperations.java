@@ -13,10 +13,10 @@ public class MathOperations {
         return a * b;
     }
 
-    public static double divide(int a, int b) {
-        if (b > 0) {
+    public static int divide(int a, int b) {
+        if (b < 0) {
             System.out.println("Không thể chia cho 0");
         }
-        return (double) a / b;
+        return a / b;
     }
 }
