@@ -14,7 +14,7 @@ public class MathOperations {
     }
 
     public static int divide(int a, int b) {
-        if (b < 0) {
+        if (b == 0) {
             System.out.println("Không thể chia cho 0");
         }
         return a / b;
